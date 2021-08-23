@@ -1,0 +1,1 @@
+const knexfile = require('../../knexfile')

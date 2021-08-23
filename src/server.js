@@ -1,14 +1,11 @@
 //Importa o Express
-const express = require('express')
+const express = require('express');
+const routes = require('./routes')
 
 //Cria a aplicação
 const app = express();
+app.use(routes);
 
-app.get('/produtos', (req, res)=>{
-    console.log('Servidor requisitado');
-
-    return res.send('Resposta do Servidor !');
-});
 
 //escuta a porta
-app.listen(3334, ()=>console.log('Servidor ON - Rodando'))
+app.listen(3334, ()=>console.log('Servidor ON - Rodando na porta 3334'))
